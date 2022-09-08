@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestRegressor
 import pickle
 
 # Import the data
-Data = pd.read_csv('FinalData.csv')
+Data = pd.read_csv('ViralDivFinalData.csv')
 
 # Extract X and y from the data
 
@@ -19,7 +19,7 @@ forest = RandomForestRegressor(n_jobs=-1, max_depth=7, n_estimators=10000)
 forest.fit(Data, np.ravel(y))
 
 # Save the model to a .pkl (Pickle) file
-pkl_filename = 'FinalModel.pkl'
+pkl_filename = 'ViralDivFinalModel.pkl'
 with open(pkl_filename, 'wb') as file:
     pickle.dump(forest, file)
 
